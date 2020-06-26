@@ -6,7 +6,7 @@ const Constraint = Matter.Constraint;
 var engine, world;
 
 function setup() {
-
+  IMG3 = loadImage("sprites/images.jpeg");
   IMG = loadImage("sprites/Cannon.png");
 IMG2 = loadImage("sprites/CannonBall.png");
 sound = loadSound("sounds/Canoon+4.mp3")
@@ -57,11 +57,14 @@ sound = loadSound("sounds/Canoon+4.mp3")
 }
 
 function draw() {
-  Engine.update(engine); 
+    Engine.update(engine); 
   background(255,255,255);  
-
+  image(IMG3, 800, 200, 1600, 600);
   image(IMG2, polygon.position.x, polygon.position.y, 40, 40);
   image(IMG, 200, 200, 200, 200);
+
+
+  
   stand.display();
   block1.display();
   block2.display();
